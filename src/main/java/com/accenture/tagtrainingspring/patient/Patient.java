@@ -2,11 +2,17 @@ package com.accenture.tagtrainingspring.patient;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-@Component
+
 @Data
 @AllArgsConstructor
+@Setter
+@Getter
+@Component
 public class Patient {
 //    String patientName, DOB, patientGender;
 //    int patientID;
@@ -52,7 +58,7 @@ public class Patient {
 //    public void setPatientID(int patientID) {
 //        this.patientID = patientID;
 //    }
-private int id;
+    private int id;
 
     private char diagnosis;
 
@@ -117,4 +123,7 @@ private int id;
     private double fractalDimensionWorst;
 
     private char groupId;
+
+    public Patient() {
+    }
 }

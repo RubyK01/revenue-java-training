@@ -9,12 +9,11 @@ import java.util.List;
 @Service
 public class ScreeningService {
     @Autowired
-
 //    public ScreeningService(ScreeningDatabase database) {
 //        Database = database;
 //    }
 
-    public boolean appointmentValidator(Patient Patient, Screening Screening){
+    public boolean isPatientScreening(Patient Patient, Screening Screening){
         boolean appointment;
 //        if(Patient.getPatientName().equals(Screening.getPatient().getPatientName()) && !Screening.getDateOfScreening().equalsIgnoreCase("N/A")){
         if (Patient.getId() == Screening.getId()){
